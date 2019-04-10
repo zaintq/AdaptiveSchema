@@ -10,7 +10,7 @@ from scipy.spatial.distance import pdist
 import matplotlib.pyplot as plt
 
 def getDBConn(db, cursor_dict=False):
-    conn = psycopg2.connect(dbname=db, user="root", host="10.230.12.75", port="26257")
+    conn = psycopg2.connect(dbname=db, user="root", host="localhost", port="26257")
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 
     if cursor_dict is True:
         cursor = conn.cursor(cursor_factory = RealDictCursor)
